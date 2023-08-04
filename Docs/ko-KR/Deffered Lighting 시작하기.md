@@ -63,7 +63,7 @@ Deferred Lighting 파이프라인은 RTX에서 사용하는 PBR 텍스처 세트
 
 새로운 능력 문자열은 "pbr" 입니다:
 
-```json
+```jsonc
 { 
   "format_version": 1, 
   "header": { 
@@ -114,7 +114,7 @@ Android의 경우, 현재 GLES 3 장치이며 Android OS 9 이상을 실행하�
 
 파일 위치: lighting/global.json
 
-```json
+```jsonc
 {
   version "format_version",
   object "directional_lights"
@@ -170,7 +170,7 @@ Android의 경우, 현재 GLES 3 장치이며 Android OS 9 이상을 실행하�
 
 파일 위치: lighting/atmospherics.json
 
-```json
+```jsonc
 {
   object "horizon_blend_stops" // 대기가 나눠지는 방법
   {
@@ -245,7 +245,7 @@ Android의 경우, 현재 GLES 3 장치이며 Android OS 9 이상을 실행하�
 
 가끔은 세계를 더 동적으로 만들기 위해 특정 조명 매개변수를 시간에 따라 변경하고 싶을 수 있습니다. 이를 위해 "키 프레임" 구문을 활용할 수 있으며, 이 구문은 "optkeyframe"으로 표시된 조명 JSON 스키마의 값들에 대체하여 사용될 수 있습니다. 작동 방식은 다음과 같습니다. 다음은 lighting/global.json 파일의 예제입니다.
 
-```json
+```jsonc
 {
     "format_version": [1, 0, 0], 
     "directional_lights": {
@@ -278,7 +278,7 @@ Android의 경우, 현재 GLES 3 장치이며 Android OS 9 이상을 실행하�
 
 이러한 모든 내용을 고려하여 lighting/global.json을 약간 수정하여 태양의 illuminance를 시간에 따라 변경할 수 있습니다.
 
-```json
+```jsonc
 {
     "format_version": [1, 0, 0], 
     "directional_lights": {
@@ -327,7 +327,7 @@ Android의 경우, 현재 GLES 3 장치이며 Android OS 9 이상을 실행하�
 
 ## lighting/global.json
 
-```json
+```jsonc
 {  
   "horizon_blend_stops":{
     "min": { 
