@@ -326,7 +326,41 @@ Android의 경우, 현재 GLES 3 장치이며 Android OS 9 이상을 실행하�
 <br/>
 
 ## lighting/global.json
+```jsonc
+{
+  "format_version": [1, 0, 0], 
+  "directional_lights": {
+    "sun": {
+      "illuminance": {
+        "0.0": 1.0,
+        "0.25": 400.0,
+        "0.35": 20000.0,
+        "0.5": 109880.0,
+        "0.65": 20000.0,
+        "0.75": 400.0,
+        "1.0": 1.0
+      },
+      "color": [ 255.0, 255.0, 255.0, 255.0 ]
+    },
+    "moon": { 
+        "illuminance": 0.27,
+        "color": "#ffffffff"
+    }, 
+    "orbital_offset_degrees": 3.0
+  }, 
+  "pbr": { 
+      "blocks": { 
+        "global_metalness_emissive_roughness": [0.0, 0.0, 1.0]  
+      }, 
+      "actors": { 
+        "global_metalness_emissive_roughness": "#0000ff"
+      } 
+  } 
+}
+```
+<br/>
 
+## lighting/atmospherics.json
 ```jsonc
 {  
   "horizon_blend_stops":{
