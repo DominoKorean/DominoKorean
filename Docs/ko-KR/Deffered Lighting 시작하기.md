@@ -15,33 +15,18 @@
 
 
 
-<div class="rounded" style='padding:0.1em; background-color:#E9D8FD; color:#69337A; border-radius: 10px;'>
-<span>
-<p style='margin-top:1em; margin-left:1em;'>
-<b> 주의</b></p>
-<p style='margin-left:1em;'>
-Deferred Lighting 기능은 실험적입니다. 모든 실험과 마찬가지로, Minecraft 버전에서는 중요한 사전 경고 없이 추가, 제거 및 기능 변경이 발생할 수 있습니다. 변경 사항에 대한 자세한 내용은 Minecraft 변경 로그를 확인하세요.<br><br>
-실험적 기능에 대해 더 자세히 알아보려면 [Minecraft: Bedrock Edition의 실험적 기능 문서](https://learn.microsoft.com/en-us/minecraft/creator/documents/experimentalfeaturestoggle)를 방문하세요.
-</p>
-<p style='margin-bottom:1em; margin-right:1em; text-align:right; font-family:Georgia'>
-</p></span>
-</div>
+> [!NOTE]
+>Deferred Lighting 기능은 실험적입니다. 모든 실험과 마찬가지로, Minecraft 버전에서는 중요한 사전 경고 없이 추가, 제거 및 기능 변경이 발생할 수 있습니다. 변경 사항에 대한 자세한 내용은 Minecraft 변경 로그를 확인하세요.
+>실험적 기능에 대해 더 자세히 알아보려면 [Minecraft: Bedrock Edition의 실험적 기능 문서](https://>learn.microsoft.com/en-us/minecraft/creator/documents/experimentalfeaturestoggle)를 방문하세요.
+
 
 
 <br/>
 
 새로 추가된 조명 기능은 선택 사항으로, 만약 리소스팩에서 어떤 매개 변수도 제공되지 않는 경우 적절한 기본값이 사용됩니다. 이러한 속성은 또한 RTX 리소스팩에서 찾을 수 있는 기존 텍스처 세트 기능을 보완하고 확장하기 위해 설계되었습니다 (텍스처 세트는 이제 RTX 전용 리소스팩으로 제한되지 않습니다).
 
-<div class="rounded" style='padding:0.1em; background-color:#E9D8FD; color:#69337A; border-radius: 10px;'>
-<span>
-<p style='margin-top:1em; margin-left:1em;'>
-<b> 주의</b></p>
-<p style='margin-left:1em;'>
+> [!NOTE]
 새로운 기능은 RTX 파이프라인과 호환되지 않습니다.
-</p>
-<p style='margin-bottom:1em; margin-right:1em; text-align:right; font-family:Georgia'>
-</p></span>
-</div>
 
 <br/>
 
