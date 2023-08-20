@@ -92,7 +92,7 @@ https://github.com/Mojang/bedrock-samples
 |------|---|
 |opaque|그냥 기존 우리가 아는 불투명 블록|
 |alpha_test|완전히 투명한 텍스쳐에 사용. AO는 같이 비활성화 됨|
-|blend|불투명도나 완전히 투명하게가 텍스쳐에서 사용할 수 있게할때 씀. AO는 같이 비활성화 됨|
+|blend|반투명이나 완전히 투명하게가 텍스쳐에서 사용할 수 있게할때 씀. AO는 같이 비활성화 됨|
 |double_sided|뒷면 컬링을 완전히 비활성화 하는데 씀|
 
 ```jsonc
