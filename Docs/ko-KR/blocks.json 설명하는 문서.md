@@ -1,4 +1,8 @@
 > [!NOTE]
+> 완성되지 않은 문서
+
+
+> [!NOTE]
 > json구문 몰라도 쓸 수 있도록 설명한 문서
 > 늅늅이들을 위한 문서는 맞기만 일단 리소스팩을
 > 만드는 가장 기본적인 부분을 안다는 가정하에 설명함
@@ -29,6 +33,223 @@ blocks.json은 리소스팩으로 가능한
 # 기본적인 형식
 일단 blocks.json은
 
-::: warning
-*here be dragons*
-:::
+> 📁리소스팩
+>> 🖼️ pack_icon.png
+>> 🗒️ manifest.json
+>> 🗒️ blocks.json
+
+이런식으로 리팩 폴더안에 바로 넣으면 됨  
+
+기본적인 베이스는 여기 베드락 리소스팩 공식 샘플파일 있으니까  
+여기서 확인할 수 있고  
+https://github.com/Mojang/bedrock-samples  
+그래도 기본적인 형식 대충 보여주면
+```jsonc
+// 이렇게 /두개 옆에 있는건 주석이라고
+// 대충 데이터 상에 아무런 영향도 안주는 메모 용도임
+{
+  "format_version": [
+    1,
+    1,
+    0
+  ],
+  "leaves": { // 원하는 블록
+    "isotropic": { // 원하는 블록에 지정해줄 데이터
+      "up": true,
+      "down": true
+    },
+      "concrete": { // 원하는 또다른 블록
+    "sound": "stone",
+    "textures": "concrete"
+    }
+  }
+}
+
+```
+이런식으로 돼있음  
+메모장이나 그런걸로 에디팅해도 되는데  
+항목 다음에 다른 항목나올때 따옴표넣는거 등  
+실수하는 경우가 많기 때문에 그냥 vscode같은 코드에디터쓰는걸 추천함  
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+# 커스텀 할 수 있는거
+
+## render_method
+
+> [!NOTE]
+> 사전 설명
+> AO는 Ambient Occlusion의 약자로
+> 대충 블록간에 모서리진곳 사이에 그 그림자로 그라데이션 생기는거 말하는거임
+
+|Material|설명|
+|------|---|
+|opaque|그냥 기존 우리가 아는 불투명 블록|
+|alpha_test|완전히 투명한 텍스쳐에 사용. AO는 같이 비활성화 됨|
+|blend|불투명도나 완전히 투명하게가 텍스쳐에서 사용할 수 있게할때 씀. AO는 같이 비활성화 됨|
+|double_sided|뒷면 컬링을 완전히 비활성화 하는데 씀|
+
+```jsonc
+{
+  "format_version": [
+    1,
+    1,
+    0
+  ],
+  "leaves": {
+	"render_method": "alpha_test"
+  }
+}
+```
+
+---
+
+## ambient_occlusion
+위에서 설명했던것처럼
+블록간에 모서리진곳 사이에 그 그림자로 그라데이션 생기는거 있을지 말지 설정하는거임
+
+```jsonc
+{
+  "format_version": [
+    1,
+    1,
+    0
+  ],
+  "leaves": {
+	"ambient_occlusion": true
+  }
+}
+```
+
+끌려면 true대신 false쓰면 됨
+render_method에서 AO없애는거랑 같이 쓰면
+ambient_occlusion이 우선 순위임
+
+---
+
+## textures
+텍스쳐 뭐쓸지 지정해주는거임  
+이걸로 여러 블록이 같은 텍스쳐쓰게해서  
+용량 최적화 하는것도 가능  
+
+```jsonc
+{
+  "format_version": [
+    1,
+    1,
+    0
+  ],
+  "leaves": {
+    "textures": "concrete" // 이렇게 하면 나뭇잎에 콘크리트 텍스쳐 쓰게 하는거임
+  }
+}
+```
+블록에 따라 여러 텍스쳐쓰는 경우에는
+```jsonc
+{
+  "format_version": [
+    1,
+    1,
+    0
+  ],
+  "chain_command_block": {
+    "textures": {
+      "up": "command_block_chain_conditional_side",
+      "down": "command_block_chain_conditional_side",
+      "north": "command_block_chain_front",
+      "south": "command_block_chain_back",
+      "west": "command_block_chain_side",
+      "east": "command_block_chain_side"
+    },
+    "sound": "metal"
+  }
+}
+```
+이런식으로도 사용
+각각 위, 아래, 동, 서, 남, 북 이런식으로 적용되고  
+굳이 각각 이름대로의 방향이 아니더라도 다른 방식으로 사용되는 경우도 있음  
+```jsonc
+{
+  "format_version": [
+    1,
+    1,
+    0
+  ],
+   "azalea" : {
+      "sound" : "azalea",
+      "textures" : {
+         "down" : "potted_azalea_bush_top",
+         "east" : "azalea_plant",
+         "north" : "azalea_side",
+         "side" : "azalea_side",
+         "south" : "potted_azalea_bush_side",
+         "up" : "azalea_top",
+         "west" : "potted_azalea_bush_plant"
+      }
+  }
+}
+```
+진달래 묘목(철쭉)인데 보면  
+모델에 씌이지 않는 서, 남, 아래부분을  
+화분에 꽂았을때 텍스쳐를 넣어둠  
+이런거는 샘플팩에서 하나하나 확인하는 수 밖에 없음
+
+---
+
+## sound
+이 블록을 부수거나 위에서 걷거나 할때  
+나오는 소리를 지정해주는거임  
+소리 리스트는 여기 참고하면 됨  
+https://wiki.bedrock.dev/blocks/block-sounds.html
+```jsonc
+{
+  "format_version": [
+    1,
+    1,
+    0
+  ],
+  "leaves": {
+      "sound" : "grass"
+  }
+}
+```
+## isotropic
+텍스쳐 랜덤으로 회전시킬때 쓰는거임  
+```jsonc
+{
+  "format_version": [
+    1,
+    1,
+    0
+  ],
+   "leaves" : {
+      "brightness_gamma" : 0.80,
+      "carried_textures" : "leaves_carried",
+      "isotropic" : {
+         "down" : true,
+         "up" : true
+           }
+   }
+}
+```
+
+## face_dimming
+
+블록 면 각도에따라 그림자지는거 없앨 수 있음
+
+```jsonc
+{
+  "format_version": [
+    1,
+    1,
+    0
+  ],
+   "leaves" : {
+	"face_dimming": false
+   }
+}
+```
+킬려면 true쓰면 됨
