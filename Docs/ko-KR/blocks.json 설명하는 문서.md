@@ -84,7 +84,7 @@ https://github.com/Mojang/bedrock-samples
 ## render_method
 
 > [!NOTE]
-> 사전 설명
+> **사전 설명**  
 > AO는 Ambient Occlusion의 약자로
 > 대충 블록간에 모서리진곳 사이에 그 그림자로 그라데이션 생기는거 말하는거임
 
