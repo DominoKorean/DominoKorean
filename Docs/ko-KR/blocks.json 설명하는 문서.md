@@ -9,6 +9,26 @@
 > 애등온용 아니고 only 리소스팩 개발자용
 
 <br/>
+<br/>
+<br/>
+
+# 목차
+- [목차](#목차)
+- [blocks.json이 뭐임?](#blocksjson이-뭐임)
+  - [그전에 json이 뭐임?](#그전에-json이-뭐임)
+- [기본적인 형식](#기본적인-형식)
+- [커스텀 할 수 있는거](#커스텀-할-수-있는거)
+  - [render\_method](#render_method)
+  - [ambient\_occlusion](#ambient_occlusion)
+  - [textures](#textures)
+  - [sound](#sound)
+  - [isotropic](#isotropic)
+  - [face\_dimming](#face_dimming)
+  - [blockshape](#blockshape)
+
+<br/>
+<br/>
+<br/>
 
 # blocks.json이 뭐임?
 blocks.json은 리소스팩으로 가능한  
@@ -283,5 +303,4 @@ https://wiki.bedrock.dev/blocks/block-sounds.html
 모델 리스트는 여기서 확인할 수 있음  
 https://wiki.bedrock.dev/blocks/block-shapes.html
 
----
 
