@@ -219,6 +219,9 @@ https://wiki.bedrock.dev/blocks/block-sounds.html
   }
 }
 ```
+
+---
+
 ## isotropic
 텍스쳐 랜덤으로 회전시킬때 쓰는거임  
 ```jsonc
@@ -239,6 +242,8 @@ https://wiki.bedrock.dev/blocks/block-sounds.html
 }
 ```
 
+---
+
 ## face_dimming
 
 블록 면 각도에따라 그림자지는거 없앨 수 있음
@@ -256,3 +261,30 @@ https://wiki.bedrock.dev/blocks/block-sounds.html
 }
 ```
 킬려면 true쓰면 됨
+
+---
+
+## blockshape
+
+블록 무슨 모델  쓸건지 지정해주는거임
+
+```jsonc
+{
+  "format_version": [
+    1,
+    1,
+    0
+  ],
+   "leaves" : {
+	"blockshape": "frame" // 이러면 나뭇잎이 아이템액자 모델 쓰게됨
+   }
+}
+```
+해당 모델을 쓴다고해서  
+해당 블록의 textures를 쓰지는 않음  
+특정 모델만 쓸 수 있고  
+모델 리스트는 여기서 확인할 수 있음  
+https://wiki.bedrock.dev/blocks/block-shapes.html
+
+---
+
