@@ -1,1 +1,7 @@
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=DominoKorean&show_icons=true&theme=스타일)
+I don't know how to code.  
+
+
+![](https://github-readme-stats.vercel.app/api?username=DominoKorean&show_icons=true&theme=one_dark_pro)  
+
+
+[![](https://img.shields.io/badge/Dominokorean_Official_Discord_Server-5865F2?style=for-the-badge&logo=Discord&logoColor=white)](https://discord.gg/D5zEJx3AFE)
