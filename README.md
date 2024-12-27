@@ -5,3 +5,26 @@ I don't know how to code.
 
 
 [![](https://img.shields.io/badge/Dominokorean_Official_Discord_Server-5865F2?style=for-the-badge&logo=Discord&logoColor=white)](https://discord.gg/D5zEJx3AFE)
+
+---
+
+
+## My translation work
+**한국어 번역 작업물들**
+
+* **Resprite**  
+https://resprite.fengeon.com
+
+* **Pixel Composer**  
+https://github.com/DominoKorean/Pixel-Composer-Korean-Localization
+
+* **Phira**  
+https://github.com/DominoKorean/phira
+
+
+> **Other small-scale contributions**  
+> 
+> - Blockbech (poeditor) https://www.blockbench.net  
+> - Optifine https://optifine.net/home
+> - SEUS GFME Edit https://github.com/DominoKorean/SEUS_PTGI_GFME
+> - fractureiser Doc https://github.com/trigram-mrp/fractureiser/tree/main/lang/ko-KR
