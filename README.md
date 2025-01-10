@@ -12,7 +12,7 @@ I don't know how to code.
 ## My translation work
 **한국어 번역 작업물들**
 
-* **Resprite** (공식번역으로 추가됨)
+* **Resprite** (공식번역으로 추가됨)  
 https://resprite.fengeon.com
 
 * **Pixel Composer**  
