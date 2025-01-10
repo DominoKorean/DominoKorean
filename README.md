@@ -18,10 +18,10 @@ https://resprite.fengeon.com
 * **Pixel Composer**  
 https://github.com/DominoKorean/Pixel-Composer-Korean-Localization
 
-* **24w14potato Korean Localization** *
+* **24w14potato Korean Localization** *  
 https://github.com/DominoKorean/24w14potato-Korean-Localization
 
-* **Phira**  (공식번역으로 추가됨)
+* **Phira**  (공식번역으로 추가됨)  
 https://github.com/DominoKorean/phira
 
 
