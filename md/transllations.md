@@ -39,7 +39,7 @@
 <br>
 
 ---
-### Other small-scale contributions
+### 작은 규모 작업들
 
 > - **Blockbech** (poeditor) https://www.blockbench.net  
 > - **Optifine** https://optifine.net/home (공식번역으로 추가됨)
