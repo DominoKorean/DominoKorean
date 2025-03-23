@@ -32,7 +32,8 @@
 
 <br>
 
-## Phira (공식번역으로 추가됨)  
+## Phira
+> **(공식번역으로 추가됨)**
 * https://github.com/DominoKorean/phira
 
 <br>
