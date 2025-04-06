@@ -30,6 +30,12 @@
 
 * https://github.com/DominoKorean/24w14potato-Korean-Localization
 
+## 25w14craftmine Korean Localization
+
+> 마인크래프트 25w14craftmine 만우절 버전용 한글 패치
+> 
+https://github.com/DominoKorean/25w14craftmine-Korean-Localization
+
 <br>
 
 ## Phira
